@@ -1,0 +1,252 @@
+/* Telo dokumentu */
+body {
+    font-size: 14px;
+    font-family: Merriweather;
+    margin: 0;
+    line-height: 1.7;
+    color: #898989;
+}
+
+.content {
+    padding: 0px 0px;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 630px;
+}
+
+a:hover {
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    font-family: Montserrat;
+}
+
+
+
+/* Horni panel */
+#navigation {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#navigation .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#navigation li {
+    font-size: 13px;
+    letter-spacing: .05em;
+    margin: 0 0 0 20px;
+    display: inline;
+    font-family: Montserrat;
+}
+
+#navigation #nav-logo {
+    font-size: 25px;
+    color: black;
+}
+
+#nav-menu a {
+    font-family: Montserrat;
+    color: steelblue;
+}
+
+
+
+/* Obrazek s textem uvnitr */
+#header {
+    text-align: center;
+}
+
+#header img {
+    width: 100%;
+}
+
+#header .content {
+    position: relative;
+}
+
+#header h1 {
+    font-size: 32px;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+
+
+/* Sekce s tremi obrazky a textem */
+#about {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .content > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#about .about-item {
+    text-align: left;
+    max-width: 31%;
+}
+
+#about .about-item img {
+    max-width: 100%;
+}
+
+#about h2 {
+    font-size: 40px;
+}
+
+#about h3, #middle-sections h3 {
+    font-size: 24px;
+}
+
+
+
+/* Sekce s novinkami a referencemi */
+#middle-sections {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background: whitesmoke;
+}
+
+#middle-sections .content {
+    display: flex;
+}
+
+#middle-sections h2 {
+    font-size: 32px;
+}
+
+#news-btn, #submit-btn {
+    font-size: 13px;
+    letter-spacing: .15em;
+}
+
+#news .news-date {
+    font-size: 12px;
+}
+
+#news .news-item {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+#news #news-btn {
+
+}
+
+#references img {
+    width: 120px;
+    border-radius: 50%;
+}
+
+#references .ref-author {
+    font-size: 14px;
+}
+
+
+
+/* Ikonky s popisem a odkazy */
+#steps {
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+#steps .fas {
+    font-size: 60px;
+    color: lightsteelblue;
+}
+
+#steps .steps-more {
+    font-size: 11px;
+}
+
+#steps .content {
+    display: flex;
+}
+
+#steps .content .steps-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#steps .steps-item i {
+    order: 1;
+    flex: 0 0 100%;
+}
+
+#steps .steps-item h3 {
+    order: 2;
+    flex: 0 0 50%;
+}
+
+#steps h3 {
+    font-size: 14px;
+}
+
+
+
+
+/* Kontakty, odkazy */
+#contact {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background: #262626;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact h3 {
+    font-size: 24px;
+    color: white;
+}
+
+#contact a:hover {
+    color: white;
+}
+
+#contact input {
+    height: 54px;
+    font-size: 18px;
+}
+
+#contact input[type=email]:invalid {
+    color: red;
+}
+
+#contact #submit-btn {
+    background: steelblue;
+    color: white;
+    border-radius: 4px;
+}
+
+#contact .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-item:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-note {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #1a1a1a;
+    font-size: 12px;
+}
