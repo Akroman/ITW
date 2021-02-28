@@ -1,5 +1,40 @@
 body {
-    padding: 0px 10px;
+    margin: 0;
+    padding: 0;
+    color: #656565;
+    font-family: Arial, sans-serif;
+}
+
+
+a {
+    text-decoration: none
+}
+
+
+p {
+    font-family: Helvetica, sans-serif;
+}
+
+
+h2 {
+    color: #b15e23;
+}
+
+
+h3 a {
+    color: #3c1f0a;
+}
+
+
+nav li {
+    color: white;
+    display: inline;
+    margin: 0 0 0 20px;
+}
+
+
+.content {
+    padding: 0px 0px;
     margin: 0 auto;
     max-width: 1200px;
     min-width: 630px;
@@ -7,6 +42,61 @@ body {
 
 
 header {
+    padding-top: 1px;
+    padding-bottom: 1px;
     background: #3c1f0a;
-    overflow: hidden;
+}
+
+
+header h1 {
+    color: #b15e23;
+    font-style: italic;
+}
+
+
+header h1 a {
+    color: white;
+}
+
+
+#lectures h3, #assignments .content div {
+    border-bottom: 1px dotted #b15e23;
+}
+
+
+#assignments p img {
+    margin-right: 20px;
+}
+
+
+#footer {
+    background: #3c1f0a;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 30px;
+}
+
+
+#footer h2, #footer dt {
+    color: white;
+}
+
+
+#footer a, #footer ul li:before {
+    color: #b15e23;
+}
+
+
+#footer dd {
+    display: inline;
+}
+
+
+#footer ul {
+    list-style: none;
+}
+
+#footer ul li:before {
+    content: '✓';
+    margin-right: 20px;
 }
