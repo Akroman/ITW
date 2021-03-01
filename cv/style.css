@@ -1,3 +1,4 @@
+/* Obecne vlastnosti */
 body {
     margin: 0;
     padding: 0;
@@ -5,70 +6,128 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 a {
     text-decoration: none
 }
-
 
 p {
     font-family: Helvetica, sans-serif;
 }
 
-
 h2 {
     color: #b15e23;
 }
-
 
 h3 a {
     color: #3c1f0a;
 }
 
-
-nav li {
-    color: white;
-    display: inline;
-    margin: 0 0 0 20px;
-}
-
-
 .content {
     padding: 0px 0px;
     margin: 0 auto;
-    max-width: 1200px;
-    min-width: 630px;
+    width: 960px;
 }
 
 
+
+/* Hlavicka stranky */
 header {
     padding-top: 1px;
-    padding-bottom: 1px;
     background: #3c1f0a;
 }
 
-
-header h1 {
-    color: #b15e23;
+header h1, header h3 {
+    color: #d5a17c;
     font-style: italic;
 }
 
+header h1 {
+    font-size: 54px;
+    margin-bottom: 0;
+}
+
+header h3 {
+    margin-top: 0;
+    padding-bottom: 30px;
+}
 
 header h1 a {
     color: white;
 }
 
 
+
+/* Seznam s odkazy */
+nav ul {
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav li a {
+    color: white;
+    position: relative;
+}
+
+nav a:hover:after {
+    content: url("ikony/menu_bullet.gif");
+    display: block;
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    margin-left: -12px;
+}
+
+
+
+/* Sekce o predmetu */
+#about {
+    padding-bottom: 60px;
+    background: rgb(233,233,233);
+    background: linear-gradient(0deg, rgba(233,233,233,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+
+
+/* Ohraniceni jednotlivych prednasek a cviceni */
 #lectures h3, #assignments .content div {
     border-bottom: 1px dotted #b15e23;
 }
 
 
+
+/* Tabulka s vysledky */
+#results table {
+    border: 3px solid black;
+}
+
+#results th {
+    background: #d5a17c;
+    color: #656565;
+    border-left: 2px dotted #3c1f0a;
+    border-top: 2px dotted #3c1f0a;
+    border-bottom: 2px solid #3c1f0a;
+    border-right: 2px solid #3c1f0a;
+}
+
+#results td {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+
+/* Odsazeni obrazku od textu u cviceni */
 #assignments p img {
     margin-right: 20px;
 }
 
 
+
+/* Sekce s kontakty a souvisejici predmety */
 #footer {
     background: #3c1f0a;
     padding-top: 1px;
@@ -76,27 +135,33 @@ header h1 a {
     margin-top: 30px;
 }
 
-
 #footer h2, #footer dt {
     color: white;
 }
 
-
-#footer a, #footer ul li:before {
-    color: #b15e23;
+#footer ul li:before, #footer a {
+    color: #d5a17c;
 }
 
+#footer dl {
+    display: grid;
+    grid-template-columns: max-content 210px;
+}
+
+#footer dt {
+    grid-column-start: 1;
+}
 
 #footer dd {
-    display: inline;
+    margin-inline-start: 0;
+    text-align: right;
+    grid-column-start: 2;
 }
-
 
 #footer ul {
-    list-style: none;
+    list-style-image: url("ikony/footer_list_bullet.gif");
 }
 
-#footer ul li:before {
-    content: '✓';
-    margin-right: 20px;
+#footer ul li {
+    margin-top: 10px;
 }
