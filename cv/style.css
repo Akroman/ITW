@@ -23,9 +23,10 @@ h3 a {
 }
 
 .content {
-    padding: 0px 0px;
-    margin: 0 auto;
-    width: 960px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
 }
 
 
@@ -76,9 +77,13 @@ nav a:hover:after {
     content: url("ikony/menu_bullet.gif");
     display: block;
     position: absolute;
-    top: 17px;
-    left: 50%;
-    margin-left: -12px;
+    bottom: -90%;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15px;
+    height: 15px;
 }
 
 
@@ -92,6 +97,60 @@ nav a:hover:after {
 
 
 
+/* Zarovnani sekci prednasek, cviceni a vysledku */
+#body-wrapper {
+    display: flex;
+    background: url("ikony/center_bg.gif");
+    padding-bottom: 30px;
+}
+
+#lectures-results-wrapper {
+    flex: 1 0 58%;
+    margin-right: 50px;
+}
+
+#assignments-wrapper {
+
+}
+
+#lectures .content {
+    display: grid;
+}
+
+#lectures .content div:nth-child(-n + 3) {
+    grid-column: 1;
+}
+
+#lectures .content div:nth-last-child(-n + 2) {
+    grid-column: 2;
+}
+
+#lectures .content div:nth-last-child(-n) {
+    grid-row: 3;
+}
+
+#lectures .content div:nth-last-child(-n + 1) {
+    grid-row: 2;
+}
+
+#lectures .content .lecture {
+    display: inline-flex;
+}
+
+#lectures .content .lecture img {
+    height: 50%;
+    padding: 10px;
+}
+
+#lectures .content .lecture p {
+    text-align: justify;
+}
+
+#assignments .content div p {
+    display: inline-flex;
+}
+
+
 /* Ohraniceni jednotlivych prednasek a cviceni */
 #lectures h3, #assignments .content div {
     border-bottom: 1px dotted #b15e23;
@@ -102,6 +161,7 @@ nav a:hover:after {
 /* Tabulka s vysledky */
 #results table {
     border: 3px solid black;
+    width: 100%;
 }
 
 #results th {
@@ -132,7 +192,14 @@ nav a:hover:after {
     background: #3c1f0a;
     padding-top: 1px;
     padding-bottom: 1px;
-    margin-top: 30px;
+}
+
+#footer .content {
+    display: flex;
+}
+
+#contacts {
+    margin-right: 50px;
 }
 
 #footer h2, #footer dt {
