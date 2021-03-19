@@ -162,11 +162,28 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 #references blockquote {
-    display: inline-block;
+    margin-bottom: 100px;
+    margin-inline-start: 0;
 }
 
-#references blockquote p {
+#references p {
+    font-size: 19px;
+    font-style: italic;
+    color: #4d4d4d;
+}
 
+#references img {
+    margin-right: 20px;
+    border-radius: 50%;
+    float: left;
+    width: 120px;
+}
+
+#references span {
+    font-size: 14px;
+    float: left;
+    font-style: italic;
+    color: #bfbfbf;
 }
 
 #references .ref-author {

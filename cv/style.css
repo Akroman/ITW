@@ -95,6 +95,9 @@ nav a:hover:after {
     background: linear-gradient(0deg, rgba(233,233,233,1) 0%, rgba(255,255,255,1) 100%);
 }
 
+#about .content p {
+    text-align: justify;
+}
 
 
 /* Zarovnani sekci prednasek, cviceni a vysledku */
@@ -105,12 +108,13 @@ nav a:hover:after {
 }
 
 #lectures-results-wrapper {
-    flex: 1 0 58%;
-    margin-right: 50px;
+    width: 60%;
+    padding-right: 30px;
 }
 
 #assignments-wrapper {
-
+    width: 40%;
+    padding-left: 30px;
 }
 
 #lectures .content {
@@ -142,7 +146,7 @@ nav a:hover:after {
     padding: 10px;
 }
 
-#lectures .content .lecture p {
+#lectures .content .lecture p, #assignments .content p {
     text-align: justify;
 }
 
