@@ -4,6 +4,19 @@ body {
     margin: auto;
     width: auto;
     font-size: 1rem;
+    background: linear-gradient(#303030, #505050);
+    color: white;
+}
+
+.master-section {
+    min-height: 100vh;
+    border-bottom: 2px solid #6e0202;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: #ef9733;
 }
 
 #content-container .content {
@@ -27,16 +40,11 @@ body {
 
 .content-right {
     flex-basis: 40%;
-    background-image: linear-gradient(to left, white, lightgray);
 }
 
 .padding-border {
     padding-left: 20px;
     padding-right: 20px;
-}
-
-h2 {
-    color: #b15e23;
 }
 
 h1 > a {
@@ -46,29 +54,22 @@ h1 > a {
 }
 
 h1 {
-    color: #b15e23;
     font-size: 20px;
-}
-
-h3 > a {
-    color: #3c1f0a;
 }
 
 p {
     text-align: justify;
-    color: #656565;
 }
 
 a {
     text-decoration: none;
-    color: black;
 }
 
 
 
 /* Hlavicka */
 header {
-    background-color: #3c1f0a;
+    background-color: #6e0202;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -96,7 +97,7 @@ nav .content {
 }
 
 nav {
-    background: #b15e23;
+    background: #080808;
 }
 
 nav ul {
@@ -116,7 +117,7 @@ nav li {
 }
 
 nav li:hover {
-    background: #3c1f0a;
+    background: #7d1010;
 }
 
 nav li a {
@@ -139,20 +140,68 @@ i {
 
 .fixed {
     position: fixed;
+    z-index: 3;
     top: 0;
     width: 100%;
 }
 
 
 
-/* Sekce O predmetu */
-#about {
-    background-image: linear-gradient(white, lightgray);
+/* Sekce Identity */
+#identity {
     padding-top: 20px;
     padding-bottom: 50px;
 }
 
+.master-section h1 {
+    font-size: 48px;
+}
 
+#identity-items-wrapper {
+    display: flex;
+}
+
+#identity .identity-item {
+    max-width: 50%;
+}
+
+#identity p {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#identity-img-wrapper img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+/* Sekce History */
+#realms {
+    text-align: center;
+}
+
+#realms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#realms .realm-item {
+    text-align: left;
+    max-width: 31%;
+}
+
+#realms .realm-item img {
+    max-width: 100%;
+}
 
 /* Sekce prednasky */
 .lecture-wrapper {
@@ -188,7 +237,7 @@ i {
     margin-right: 5px;
 }
 
-#lectures h3 {
+#history h3 {
     border-bottom: 2px dotted #b15e23;
     margin-top: 0;
 }
@@ -196,20 +245,15 @@ i {
 
 
 /* Tabulka s vysledky */
-#results table {
+#motivation table {
     width: 100%;
-    color: dimgray;
 }
 
-#results th {
-    background-color: #d5a17c;
-}
-
-#results tr td:first-of-type {
+#motivation tr td:first-of-type {
     text-align: left;
 }
 
-#results td {
+#motivation td {
     text-align: center;
 }
 
@@ -262,7 +306,6 @@ i {
 
 /* Paticka */
 footer {
-    background-color: #3c1f0a;
     padding-bottom: 10px;
     padding-top: 10px;
 }
@@ -307,6 +350,10 @@ dd {
 
 
 /* Atributy pro rozliseni */
+@media screen and (min-width: 768px) {
+
+}
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
     #nav-text span {
         display: none;
@@ -348,6 +395,30 @@ dd {
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+    #identity-items-wrapper {
+        flex-direction: column;
+    }
+
+    #identity-img-wrapper img {
+        position: inherit;
+        top: 0;
+        transform: inherit;
+    }
+
+    #identity .identity-item {
+        max-width: 100%;
+    }
+
+    #realms {
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #realms .realm-item {
+        max-width: 100%;
+    }
+
     #nav-text span {
         display: none;
     }

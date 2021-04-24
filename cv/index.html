@@ -1,98 +1,119 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>ITW - tvorba webových stránek</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
 </head>
 <body>
-    <header>
-        <div class="content">
-            <h1><a href="index.html">ITW</a></h1>
-            <h3>Tvorba webových stránek</h3>
-            <nav>
-                <ul>
-                    <li><a href="index.html#about">O předmětu</a></li>
-                    <li><a href="index.html#lectures">Přednášky</a></li>
-                    <li><a href="index.html#results">Přehled výsledků</a></li>
-                    <li><a href="index.html#assignments">Cvičení</a></li>
-                    <li><a href="index.html#contacts">Kontaktujte nás</a></li>
-                    <li><a href="index.html#subjects">Související předměty</a></li>
-                </ul>
-            </nav>
+    <header id="index">
+        <div class="header-content">
+            <div class="content padding-border">
+                <h1><a href="#">ITW</a>Tvorba webových stránek</h1>
+            </div>
         </div>
+        <nav id="navigation">
+            <div class="nav-content">
+                <ul id="nav-text">
+                    <li>
+                        <a href="#index"><i class="fas fa-home"></i>Index</a>
+                    </li>
+                    <li class="title">
+                        <a href="#about"><i class="fas fa-info-circle"></i><span>O předmětu</span></a>
+                    </li>
+                    <li class="title">
+                        <a href="#lectures"><i class="fas fa-tv"></i><span>Přednášky</span></a>
+                    </li>
+                    <li class="title">
+                        <a href="#results"><i class="fas fa-grin-beam-sweat"></i><span>Výsledky</span></a>
+                    </li>
+                    <li class="title">
+                        <a href="#assignments"><i class="fas fa-hammer"></i><span>Cvičení</span></a>
+                    </li>
+                    <li class="title">
+                        <a href="#contacts"><i class="fas fa-envelope"></i><span>Kontakt</span></a>
+                    </li>
+                    <li class="title">
+                        <a href="#related"><i class="fas fa-code-branch"></i><span>Související</span></a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <a id="hamburger-link">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <section id="about">
-        <div class="content">
-            <h2>O předmětu ITW - tvorba webových stránek</h2>
-            <p>
-                Toto je text o předmětu ITW. Tento text je velice zajímavý a poutavý. Některé úseky tohoto
-                textu jsou dokonce <b>zvýrazněny</b> a to už je <b>opravdu co říct.</b>
-            </p>
+        <div class="content padding-border">
+            <div>
+                <h2>O předmětu ITW - tvorba webových stránek</h2>
+                <p>
+                    <strong>Lorem ipsum dolor sit amet</strong>, consectetuer adipiscing elit.
+                    Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Etiam quis quam. Nunc auctor.
+                    Integer tempor. Fusce aliquam vestibulum ipsum. Nulla quis diam. Curabitur sagittis hendrerit ante.
+                    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+                    voluptates repudiandae sint et molestiae non recusandae. Maecenas ipsum velit, consectetuer eu lobortis ut,
+                    dictum at dui. Aenean placerat. Suspendisse sagittis ultrices augue. Proin pede metus, vulputate nec,
+                    fermentum fringilla, vehicula vitae, justo. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
         </div>
     </section>
 
-    <div id="body-wrapper" class="content">
-        <div id="lectures-results-wrapper">
-            <section id="lectures">
-                <div class="content">
+    <div id="content-container">
+        <div class="content">
+            <div class="content-left padding-border">
+                <section id="lectures">
                     <h2>Přednášky</h2>
-                    <div class="lecture">
-                        <img src="ikony/icon1.gif" alt="lecture1">
+                    <div class="lectures-container">
                         <div>
-                            <h3>
-                                <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p01/prednaska.html" target="_blank">
-                                    Internet
-                                </a>
-                            </h3>
-                            <p>Úvodní přednáška, ve které jsou představeny základní principy webových stránek.</p>
+                            <div class="lecture-wrapper">
+                                <img src="ikony/icon1.gif" alt="1. přednáška">
+                                <div class="lecture-content">
+                                    <h3><a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/itw_p01.pdf">Základy jazyka HTML</a></h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <div class="lecture-wrapper">
+                                <img src="ikony/icon2.gif" alt="2. přednáška">
+                                <div class="lecture-content">
+                                    <h3><a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/itw_p02.pdf">Pokročilé vlastnosti HTML, XML a XHTML</a></h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="lecture-wrapper">
+                                <img src="ikony/icon3.gif" alt="3. přednáška">
+                                <div class="lecture-content">
+                                    <h3><a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/itw_p03.pdf">Úvod do kaskádových stylů (CSS)</a></h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <div class="lecture-wrapper">
+                                <img src="ikony/icon4.gif" alt="4. přednáška">
+                                <div class="lecture-content">
+                                    <h3><a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/itw_p04.pdf">JavaScript a jQuery</a></h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="lecture">
-                        <img src="ikony/icon2.gif" alt="lecture2">
-                        <div>
-                            <h3>
-                                <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p09/prednaska.html" target="_blank">
-                                    JavaScript a jQuery
-                                </a>
-                            </h3>
-                            <p>V této přednášce jsou představeny základy jazyka JavaScript a knihovny jQuery.</p>
-                        </div>
-                    </div>
-
-                    <div class="lecture">
-                        <img src="ikony/icon3.gif" alt="lecture3">
-                        <div>
-                            <h3>
-                                <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p03/prednaska.html" target="_blank">
-                                    Kaskádové styly (CSS)
-                                </a>
-                            </h3>
-                            <p>Zde si ukážeme, jak fungují kaskádové styly (CSS).</p>
-                        </div>
-                    </div>
-
-                    <div class="lecture">
-                        <img src="ikony/icon4.gif" alt="lecture4">
-                        <div>
-                            <h3>
-                                <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p02/prednaska.html" target="_blank">
-                                    Základy jazyka HTML
-                                </a>
-                            </h3>
-                            <p>Přednáška pojednává o principech značkovacího jazyka HTML.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section id="results">
-                <h2>Přehled výsledků</h2>
-                <table>
-                    <thead>
+                </section>
+                <section id="results">
+                    <h2>Přehled výsledků</h2>
+                    <table>
+                        <thead>
                         <tr>
                             <th rowspan="3">Jméno</th>
                             <th colspan="6">Body</th>
@@ -110,8 +131,8 @@
                             <th>Půlsem.</th>
                             <th>Zk.</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>Jan Novák</td>
                             <td>18</td>
@@ -130,80 +151,80 @@
                             <td>25</td>
                             <td>99</td>
                         </tr>
-                    </tbody>
-                </table>
-            </section>
-        </div>
-
-
-        <div id="assignments-wrapper">
-            <section id="assignments">
-                <div class="content">
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <div class="content-right padding-assignments">
+                <section id="assignments">
                     <h2>Cvičení</h2>
                     <div>
-                        <h3>
-                            <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c2" target="_blank">
-                                Jazyk HTML
-                            </a>
-                        </h3>
-                        <p><img src="ikony/news_icon.gif" alt="assessment1">Náplní cvičení je vytvoření jednoduché HTML stránky.</p>
+                        <div class="assignment">
+                            <h3><a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c1">DNS a HTTP</a></h3>
+                            <div class="assignment-wrapper">
+                                <img src="ikony/news_icon.gif" alt="1. cvičení">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="assignment">
+                            <h3><a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c2">Jazyk HTML</a></h3>
+                            <div class="assignment-wrapper">
+                                <img src="ikony/news_icon.gif" alt="2. cvičení">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="assignment">
+                            <h3><a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c3">Styl textu</a></h3>
+                            <div class="assignment-wrapper">
+                                <img src="ikony/news_icon.gif" alt="3. cvičení">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="assignment">
+                            <h3><a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c4">CSS rozložení stránky</a></h3>
+                            <div class="assignment-wrapper">
+                                <img src="ikony/news_icon.gif" alt="4. cvičení">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div>
-                        <h3>
-                            <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c3" target="_blank">
-                                Styl textu
-                            </a>
-                        </h3>
-                        <p><img src="ikony/news_icon.gif" alt="assessment2">V tomto cvičení si ukážeme, jak lze pomocí CSS měnit styl textu.</p>
-                    </div>
-
-                    <div>
-                        <h3>
-                            <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c4" target="_blank">
-                                CSS rozložení stránky
-                            </a>
-                        </h3>
-                        <p><img src="ikony/news_icon.gif" alt="assessment3">Zde se podíváme na možnosti rozložení stránek pomocí CSS.</p>
-                    </div>
-
-                    <div>
-                        <h3>
-                            <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c6" target="_blank">
-                                JavaScript a jQuery
-                            </a>
-                        </h3>
-                        <p><img src="ikony/news_icon.gif" alt="assessment4">Na tomto cvičení si vyzkoušíme na stránce použití JavaScriptu.</p>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     </div>
 
-    <div id="footer">
-        <div class="content">
-            <section id="contacts">
-                <h2>Kontaktujte nás</h2>
-                <dl>
-                    <dt>Garant: </dt>
-                    <dd><a href="mailto:itw-garant@fit.vutbr.cz">itw-garant@fit.vutbr.cz</a></dd>
-                    <dt>Přednášející: </dt>
-                    <dd><a href="mailto:itw-prednasejici@fit.vutbr.cz">itw-prednasejici@fit.vutbr.cz</a></dd>
-                    <dt>Cvičící: </dt>
-                    <dd><a href="mailto:itw-cvicici@fit.vutbr.cz">itw-cvicici@fit.vutbr.cz</a></dd>
-                </dl>
-            </section>
+    <footer>
+        <div class="content padding-border">
+            <div id="footer-content">
+                <section id="contacts">
+                    <h2>Kontaktujte nás</h2>
+                    <dl>
+                        <div class="dl-table-row">
+                            <dt>Garant</dt>
+                            <dd><a href="mailto:itw-garant@fit.vutbr.cz">itw-garant@fit.vutbr.cz</a></dd>
+                        </div>
+                        <div class="dl-table-row">
+                            <dt>Přednášející</dt>
+                            <dd><a href="mailto:itw-prednasejici@fit.vutbr.cz">itw-prednasejici@fit.vutbr.cz</a></dd>
+                        </div>
+                        <div class="dl-table-row">
+                            <dt>Cvičící</dt>
+                            <dd><a href="mailto:itw-cvicici@fit.vutbr.cz">itw-cvicici@fit.vutbr.cz</a></dd>
+                        </div>
+                    </dl>
+                </section>
 
-            <section id="subjects">
-                <h2>Související předměty</h2>
-                <ul>
-                    <li><a href="https://www.fit.vut.cz/study/course/13985/.cs" target="_blank">Informační systémy</a></li>
-                    <li><a href="https://www.fit.vut.cz/study/course/14120/.cs" target="_blank">Pokročilé informační systémy</a></li>
-                    <li><a href="https://www.fit.vut.cz/study/course/13866/.cs" target="_blank">Analýza informačních systémů</a></li>
-                    <li><a href="https://www.fit.vut.cz/study/course/14023/.cs" target="_blank">Skriptovací jazyky</a></li>
-                </ul>
-            </section>
+                <section id="related">
+                    <h2>Související předměty</h2>
+                    <ul>
+                        <li> <a href="https://www.fit.vut.cz/study/course/IIS/.cs">Informační systémy</a></li>
+                        <li> <a href="https://www.fit.vut.cz/study/course/PIS/.cs">Pokročilé informační systémy</a></li>
+                        <li> <a href="https://www.fit.vut.cz/study/course/AIS/.cs">Analýza informačních systémů</a></li>
+                        <li> <a href="https://www.fit.vut.cz/study/course/14023/.cs">Skriptovací jazyky</a></li>
+                    </ul>
+                </section>
+            </div>
         </div>
-    </div>
+    </footer>
 </body>
 </html>

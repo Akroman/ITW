@@ -8,7 +8,8 @@ body {
 }
 
 .content {
-    padding: 0px 0px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0 auto;
     max-width: 1200px;
     min-width: 630px;
@@ -41,20 +42,20 @@ h1, h2, h3, h4, h5, h6, a {
 
 #navigation li {
     font-size: 13px;
+    text-transform: uppercase;
     letter-spacing: .05em;
     margin: 0 0 0 20px;
     display: inline;
-    font-family: Montserrat;
 }
 
-#navigation #nav-logo {
+#navigation li a {
+    color: #bfbfbf;
+}
+
+#navigation #nav-logo a {
     font-size: 25px;
+    font-weight: bold;
     color: black;
-}
-
-#nav-menu a {
-    font-family: Montserrat;
-    color: steelblue;
 }
 
 
@@ -74,10 +75,11 @@ h1, h2, h3, h4, h5, h6, a {
 
 #header h1 {
     font-size: 32px;
+    font-weight: normal;
     color: white;
     position: absolute;
     bottom: 10px;
-    left: 20px;
+    left: 40px;
 }
 
 
@@ -90,6 +92,10 @@ h1, h2, h3, h4, h5, h6, a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#about .content > p {
+    font-size: 18px;
 }
 
 #about .content > div {
@@ -108,11 +114,19 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 #about h2 {
+    color: #4d4d4d;
+    font-weight: normal;
     font-size: 40px;
 }
 
 #about h3, #middle-sections h3 {
+    color: #4d4d4d;
+    font-weight: normal;
     font-size: 24px;
+}
+
+#about .about-item p {
+    color: #bfbfbf;
 }
 
 
@@ -130,12 +144,18 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 #middle-sections h2 {
+    color: #4d4d4d;
+    font-weight: normal;
     font-size: 32px;
 }
 
-#news-btn, #submit-btn {
+#news-btn a , #submit-btn {
     font-size: 13px;
     letter-spacing: .15em;
+}
+
+#news a {
+    color: steelblue;
 }
 
 #news .news-date {
@@ -146,13 +166,30 @@ h1, h2, h3, h4, h5, h6, a {
     border-bottom: 1px solid #e3e3e3;
 }
 
-#news #news-btn {
+#news span {
+    color: #bfbfbf;
+    text-transform: uppercase;
+}
 
+#news #news-btn {
+    margin-top: 20px;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightsteelblue;
+}
+
+#news #news-btn a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: steelblue;
 }
 
 #references {
     flex: 1 0 40%;
-    margin: 20px;
+    margin-left: 20px;
 }
 
 #references img {
@@ -227,7 +264,15 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 #steps h3 {
+    color: #4d4d4d;
+    text-transform: uppercase;
     font-size: 14px;
+}
+
+#steps a {
+    color: steelblue;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 
@@ -245,9 +290,19 @@ h1, h2, h3, h4, h5, h6, a {
     padding: 0;
 }
 
+#contact li {
+    margin: 3px 0;
+}
+
 #contact h3 {
     font-size: 24px;
+    font-weight: normal;
     color: white;
+}
+
+#contact a {
+    text-transform: uppercase;
+    color: steelblue;
 }
 
 #contact a:hover {
@@ -257,6 +312,16 @@ h1, h2, h3, h4, h5, h6, a {
 #contact input {
     height: 54px;
     font-size: 18px;
+    font-family: Montserrat;
+    margin: 3px;
+}
+
+#contact input[type=email] {
+    border-radius: 7px;
+    border: #bfbfbf solid 1px;
+    order: -1;
+    flex: 1 0 100%;
+    box-sizing: border-box;
 }
 
 #contact input[type=email]:invalid {
@@ -264,9 +329,13 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 #contact #submit-btn {
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
     background: steelblue;
     color: white;
-    border-radius: 4px;
 }
 
 #contact .content {
@@ -280,15 +349,6 @@ h1, h2, h3, h4, h5, h6, a {
     flex-wrap: wrap;
     align-content: flex-start;
     padding: 3px;
-}
-
-.contact-item:nth-child(3) input {
-    margin: 3px;
-}
-
-.contact-item:nth-child(3) input[type=email] {
-    order: -1;
-    flex: 1 0 100%;
 }
 
 #footer-note {
