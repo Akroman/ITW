@@ -1,7 +1,7 @@
 window.onload = () => {
     const navigation = document.getElementById("navigation");
     const navText = document.getElementById("nav-text");
-    const hamburgerLink = document.getElementById("hamburger-link");
+    const dropdownMenuLink = document.getElementById("dropdown-menu-link");
 
 
 
@@ -19,7 +19,7 @@ window.onload = () => {
         }
     });
 
-    hamburgerLink.onclick = () => {
+    dropdownMenuLink.onclick = () => {
         if (navText.classList.contains("responsive")) {
             navText.classList.remove("responsive");
         } else {

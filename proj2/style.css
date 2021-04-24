@@ -15,8 +15,8 @@ body {
     justify-content: center;
 }
 
-a {
-    color: #ef9733;
+.master-section h1 {
+    font-size: 48px;
 }
 
 #content-container .content {
@@ -29,19 +29,6 @@ a {
     max-width: 1200px;
 }
 
-.content-left {
-    flex-basis: 60%;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.content-right {
-    flex-basis: 40%;
-}
-
 .padding-border {
     padding-left: 20px;
     padding-right: 20px;
@@ -50,7 +37,6 @@ a {
 h1 > a {
     font-size: 4rem;
     color: white;
-    display: block;
 }
 
 h1 {
@@ -63,11 +49,12 @@ p {
 
 a {
     text-decoration: none;
+    color: #ef9733;
 }
 
 
 
-/* Hlavicka */
+/* Hlavicka a navigacni menu */
 header {
     background-color: #6e0202;
     display: flex;
@@ -113,7 +100,6 @@ nav ul {
 nav li {
     position: relative;
     display: inline-block;
-    padding: 20px;
 }
 
 nav li:hover {
@@ -124,9 +110,11 @@ nav li a {
     color: white;
     font-size: 15px;
     margin: auto;
+    display: block;
+    padding: 20px;
 }
 
-.hamburger {
+.dropdown-menu {
     position: absolute;
     padding: 20px;
     color: white;
@@ -153,22 +141,12 @@ i {
     padding-bottom: 50px;
 }
 
-.master-section h1 {
-    font-size: 48px;
-}
-
 #identity-items-wrapper {
     display: flex;
 }
 
 #identity .identity-item {
     max-width: 50%;
-}
-
-#identity p {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
 }
 
 #identity-img-wrapper img {
@@ -184,6 +162,11 @@ i {
 
 
 /* Sekce History */
+#history h3 {
+    border-bottom: 2px dotted #ef9733;
+    margin-top: 0;
+}
+
 #realms {
     text-align: center;
 }
@@ -203,103 +186,61 @@ i {
     max-width: 100%;
 }
 
-/* Sekce prednasky */
-.lecture-wrapper {
+
+
+/* Sekce Arsenal */
+#arsenal-items-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#arsenal #sub-section-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: start;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.lectures-container div .lecture-wrapper:last-of-type {
-    padding-top: 30px;
+#arsenal #sub-section-list li:not(:first-child) {
+    margin: 0 0 0 20px;
 }
 
-.lecture-content {
-    padding-left: 20px;
-    text-align: justify;
-    width: 100%;
-}
-
-.lecture-wrapper img {
-    align-self: flex-start;
-}
-
-.lectures-container {
+#arsenal-items-wrapper .sub-section {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 30px;
 }
 
-.lectures-container div:not(:first-child) {
-    margin-left: 5px;
+#arsenal-items-wrapper .sub-section:not(:last-child) {
+    border-bottom: 2px solid #ef9733;
 }
 
-.lectures-container div:not(:last-child) {
-    margin-right: 5px;
+#arsenal-items-wrapper .sub-section-item {
+    width: 48%;
 }
 
-#history h3 {
-    border-bottom: 2px dotted #b15e23;
-    margin-top: 0;
-}
-
-
-
-/* Tabulka s vysledky */
-#motivation table {
-    width: 100%;
-}
-
-#motivation tr td:first-of-type {
-    text-align: left;
-}
-
-#motivation td {
+.weapon-stats-table, .weapon-stats-table th, .weapon-stats-table td {
+    border: 1px solid white;
+    border-collapse: collapse;
     text-align: center;
 }
 
-
-
-/* Sekce Cviceni */
-#assignments {
-    padding-bottom: 30px;
+.weapon-stats-table th {
+    background-color: #6e0202;
 }
 
-.assignment {
-    border-bottom: 2px dotted #b15e23;
-    padding: 20px 0;
+.weapon-stats-table th, .weapon-stats-table td {
+    padding: 0 10px;
 }
 
-.assignment:first-of-type {
-    padding-top: 0;
-}
-
-.assignment-wrapper {
-    display: flex;
-}
-
-.assignment-wrapper img {
-    align-self: flex-start;
-}
-
-.assignment-wrapper p {
-    padding-left: 20px;
-    margin: 0;
-}
-
-.padding-assignments {
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-
-
-/* Sekce Souvisejici */
-#related ul {
-    padding-left: 20px;
-}
-
-#related {
-    padding-left: 60px;
+.weapon-stats-table {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -308,10 +249,7 @@ i {
 footer {
     padding-bottom: 10px;
     padding-top: 10px;
-}
-
-footer ul {
-    list-style-image: url('ikony/footer_list_bullet.gif');
+    background: linear-gradient(#080808, #303030);
 }
 
 footer a {
@@ -328,56 +266,41 @@ footer h2 {
     width: 66.66%;
 }
 
-dl {
-    display: table;
+
+
+/* Sekce Motivation */
+#motivation-items-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
-.dl-table-row {
-    display: table-row;
+#motivation-items-wrapper .motivation-item {
+    display: flex;
+    max-width: 23%;
 }
 
-dt {
-    display: table-cell;
-    color: white;
+.motivation-img {
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
-dd {
-    display: table-cell;
-    text-align: right;
-    padding-left: 30px;
+.motivation-img img {
+    width:  75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.motivation-text p {
+    text-align: left;
 }
 
 
 
 /* Atributy pro rozliseni */
-@media screen and (min-width: 768px) {
-
-}
-
 @media screen and (min-width: 768px) and (max-width: 991px) {
     #nav-text span {
         display: none;
-    }
-
-    .lectures-container {
-        flex-wrap: wrap;
-    }
-
-    .lectures-container div {
-        width: 100%;
-    }
-
-    .lectures-container div .lecture-wrapper:last-of-type {
-        padding-top: 0;
-    }
-
-    #contacts {
-        width: 60%;
-    }
-
-    #related {
-        width: 40%;
-        padding-left: 60px;
     }
 
     #footer-content {
@@ -385,12 +308,14 @@ dd {
     }
 }
 
-@media screen and (min-width: 992px) {
-    .content-left {
-        flex-basis: 66.666%;
+@media screen and (max-width: 991px) {
+    #motivation-items-wrapper {
+        flex-wrap: wrap;
     }
-    .content-right {
-        flex-basis: 33.333%;
+
+    #motivation-items-wrapper .motivation-item {
+        flex-basis: 50%;
+        max-width: 47%;
     }
 }
 
@@ -423,8 +348,27 @@ dd {
         display: none;
     }
 
-    #related {
-        padding-left: 0;
+    #arsenal #sub-section-list {
+        flex-direction: column;
+    }
+
+    #arsenal #sub-section-list li:not(:first-child) {
+        margin: 10px 0 0 0;
+    }
+
+    #arsenal-items-wrapper .sub-section {
+        flex-direction: column;
+    }
+
+    #arsenal-items-wrapper .sub-section-item {
+        width: 100%;
+    }
+
+    .weapon-stats-table {
+        position: inherit;
+        top: 0;
+        transform: inherit;
+        margin-bottom: 20px;
     }
 
     #content-container .content {
@@ -432,33 +376,9 @@ dd {
         flex-wrap: wrap;
     }
 
-    .lectures-container div .lecture-wrapper:last-of-type {
-        padding-top: 0;
-    }
-
-    .lectures-container {
-        flex-wrap: wrap;
-    }
-
-    .lectures-container div:not(:first-child) {
-        margin-left: 0;
-    }
-
-    .lectures-container div:not(:last-child) {
-        margin-right: 0;
-    }
-
-    .lectures-container div {
-        width: 100%;
-    }
-
     #footer-content {
         flex-wrap: wrap;
         width: 100%;
-    }
-
-    #contacts, #related {
-        flex-basis: 100%;
     }
 }
 
@@ -471,16 +391,16 @@ dd {
         display: inline;
     }
 
-    .hamburger {
+    .dropdown-menu {
         display: inherit;
         transition: 0.2s;
     }
 
-    .hamburger a {
+    .dropdown-menu a {
         color: white;
     }
 
-    .hamburger:hover {
+    .dropdown-menu:hover {
         transform: scale(1.2);
     }
 
@@ -508,5 +428,15 @@ dd {
 
     .responsive span {
         display: block !important;
+    }
+
+    #motivation-items-wrapper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    #motivation-items-wrapper .motivation-item {
+        flex-basis: 100%;
+        max-width: 100%;
     }
 }
